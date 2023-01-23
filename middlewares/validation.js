@@ -1,4 +1,4 @@
-const joi = require('@hapi/joi');
+/*const joi = require('@hapi/joi');
 
 
 
@@ -29,4 +29,4 @@ const loginValidation= (data)=>{
     
 }
 
-module.exports = {registerValidation, loginValidation }
+module.exports = {registerValidation, loginValidation }*/
