@@ -1,10 +1,15 @@
 {
     "version": 2,
-    "name": "sney3ibackend",
     "builds": [
-       { "src": "app.js", "use": "@vercel/node" }
+        {
+            "src": "./app.js",
+            "use": "@vercel/node"
+        }
     ],
     "routes": [
-       { "src": "/(.*)", "dest": "/app.js" }
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
     ]
- }
+}
