@@ -5,8 +5,10 @@ const dotenv = require("dotenv");
 
 dotenv.config() ;
 
-//
+//parsing data 
 app.use(express.json());
+ // cors 
+ app.use(cors());
 
 
 // importing routes
