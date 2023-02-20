@@ -39,4 +39,12 @@ const verifyTokenAndAuth = (req,res, next)=>{
 
 }
 
-module.exports = {verifyToken,verifyTokenAndAuth }
+const verifyUser = ( req, res, next)=>{
+    if(req.params.id == req.user.id){
+        next(); 
+    }else{
+        return res.status(403).json("you re not authorized") ;
+    }
+}
+
+module.exports = {verifyToken,verifyTokenAndAuth, verifyUser }

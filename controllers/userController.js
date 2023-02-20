@@ -45,18 +45,18 @@ const userLogin = async(req,res)=>{
 
     const user = await User.findOne({email : req.body.email });
     if(!user){
-        return res.status(400).json({message : ' invalid email '}); 
+        return res.status(400).json( ' invalid email '); 
      }
      //
      const validPass = await bcrypt.compare(req.body.password , user.password); 
   if(!validPass){
-    return res.status(400).json({message:'wrong password'});
+    return res.status(400).json('wrong password');
   }
   
 
   //
   const token  =  jwt.sign({id:user._id}, process.env.token_secret);
-       res.header('authtoken', token).json({message:token}); 
+       res.header('authtoken', token).json(token); 
 }
 
 

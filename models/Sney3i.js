@@ -2,6 +2,15 @@ const mongoose = require("mongoose");
 
 
 const sney3iSchema = new mongoose.Schema({
+
+    like:{
+        type : Number ,
+        default : 0
+    }, 
+    unlike:{
+        type: Number,
+        default : 0
+    },
     
     
     email:{
@@ -36,7 +45,8 @@ const sney3iSchema = new mongoose.Schema({
     },
     photo:{
         type: String, 
-        required: true, 
+        default : ""
+        
     },
     
     city:{
@@ -51,6 +61,10 @@ const sney3iSchema = new mongoose.Schema({
     bio:{
         type: String, 
         
+    },
+    spec:{
+        type : String, 
+        required:true 
     }
 
 

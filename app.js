@@ -3,13 +3,16 @@ const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors"); 
+const bodyParser = require("body-parser"); 
 
 dotenv.config() ;
 
 //parsing data 
-app.use(express.json());
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
  // cors 
  app.use(cors());
+
 
 
 // importing routes
